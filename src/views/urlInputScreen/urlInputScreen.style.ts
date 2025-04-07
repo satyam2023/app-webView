@@ -38,9 +38,9 @@ export const styles = (height: number, width: number) => {
       width: width,
       // height: height * 0.4,
       marginBottom:height*0.05,
-      resizeMode:'stretch',
+      resizeMode:'contain',
       height:undefined,
-      aspectRatio:1.45,
+      aspectRatio:1.5,
       
     },
     inputScreenContainer: {
