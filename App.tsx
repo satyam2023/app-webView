@@ -7,8 +7,8 @@ const App = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <StatusBar
-        barStyle="dark-content"
-        backgroundColor={colorConstant.white}
+        barStyle='light-content'
+        backgroundColor={colorConstant.primaryBlue}
         translucent={false}
       />
       <MainPageViewModel />

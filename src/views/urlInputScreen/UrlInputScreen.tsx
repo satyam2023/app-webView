@@ -24,7 +24,6 @@ const UrlInputScreen: React.FC<IUrlInputScreenProps> = ({
   return (
     <View style={style.inputScreenContainer}>
       <Image source={Glyphs.AppLogo} style={style.appLogo} />
-      <Text style={style.appHeadingText}>{stringConstants.appHeading}</Text>
       <View style={style.input}>
         <TextInput
           style={style.textInput}

@@ -23,6 +23,8 @@ export const styles = (height: number, width: number) => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       paddingHorizontal: 10,
+      width:'90%',
+      alignSelf:'center'
     },
     btnStyle: {
       paddingHorizontal: 6,
@@ -33,15 +35,17 @@ export const styles = (height: number, width: number) => {
       borderRadius: 8,
     },
     appLogo: {
-      alignSelf: 'center',
-      width: width * 0.75,
-      height: height * 0.15,
-      resizeMode: 'contain',
+      width: width,
+      // height: height * 0.4,
+      marginBottom:height*0.05,
+      resizeMode:'stretch',
+      height:undefined,
+      aspectRatio:1.45,
+      
     },
     inputScreenContainer: {
       flex: 1,
       backgroundColor: colorConstant.white,
-      padding: 20,
     },
     textInput: {
       width: '70%',
@@ -59,7 +63,8 @@ export const styles = (height: number, width: number) => {
     errorText:{
       fontSize:14,
       color:colorConstant.red,
-      marginTop:5
+      marginTop:5,
+      marginLeft:20
     }
   });
 };

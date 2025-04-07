@@ -36,7 +36,7 @@ const styles = StyleSheet.create<WebViewStyles>({
     justifyContent: 'space-between',
     paddingHorizontal: 16,
     alignItems: 'center',
-    backgroundColor: colorConstant.white,
+    backgroundColor: colorConstant.primaryBlue,
     paddingVertical: 10,
   },
   backArrowImgStyle: {transform: [{rotate: '180deg'}]},

@@ -4,6 +4,6 @@ urlInputPlaceholder:"Enter URL",
 go:'GO',
 prevPage:'Prev Page',
 nextPage:'Next Page',
-openAnotherUrl:'Open Another Url',
+openAnotherUrl:'Go To Home',
 plsEnterUrl:'Please enter a URL'
 };

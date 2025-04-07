@@ -41,7 +41,8 @@ const styles = (isEnabled?: boolean) => {
     container: {
       alignItems: 'center',
       justifyContent:'center',
-      alignSelf:'center'
+      alignSelf:'center',
+      opacity: isEnabled ? 1 : 0.4,
     },
     button: {
       height: 30,
@@ -50,7 +51,6 @@ const styles = (isEnabled?: boolean) => {
       borderRadius: 15,
       justifyContent: 'center',
       alignItems: 'center',
-      opacity: isEnabled ? 1 : 0.4,
     },
     image: {
       height: 15,
@@ -59,7 +59,7 @@ const styles = (isEnabled?: boolean) => {
       tintColor: colorConstant.white,
     },
     text: {
-      color: colorConstant.gray,
+      color: colorConstant.white,
       fontSize: 8,
       textAlign: 'center',
       marginTop:2
