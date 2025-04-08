@@ -10,6 +10,7 @@ interface UrlInputScreenStyles {
   textInput: ViewStyle;
   appHeadingText: TextStyle;
   errorText:TextStyle;
+  appContentStyle:ViewStyle;
 }
 
 export const styles = (height: number, width: number) => {
@@ -23,8 +24,6 @@ export const styles = (height: number, width: number) => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       paddingHorizontal: 10,
-      width:'90%',
-      alignSelf:'center'
     },
     btnStyle: {
       paddingHorizontal: 6,
@@ -64,7 +63,9 @@ export const styles = (height: number, width: number) => {
       fontSize:14,
       color:colorConstant.red,
       marginTop:5,
-      marginLeft:20
+    },
+    appContentStyle:{
+      paddingHorizontal:20
     }
   });
 };
