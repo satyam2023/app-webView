@@ -1,7 +1,6 @@
 import {ImageStyle, StyleSheet, ViewStyle} from 'react-native';
 import {colorConstant} from '../../constant/colorConstant';
 
-
 interface WebViewStyles {
   container: ViewStyle;
   closeButton: ViewStyle;
@@ -9,6 +8,8 @@ interface WebViewStyles {
   webView: ViewStyle;
   headerStyle: ViewStyle;
   backArrowImgStyle: ImageStyle;
+  modalCloseBtnStyle: ViewStyle;
+  modalBackGround: ViewStyle;
 }
 
 const styles = StyleSheet.create<WebViewStyles>({
@@ -40,6 +41,17 @@ const styles = StyleSheet.create<WebViewStyles>({
     paddingVertical: 10,
   },
   backArrowImgStyle: {transform: [{rotate: '180deg'}]},
+  modalCloseBtnStyle: {
+    alignSelf: 'center',
+    width: '50%',
+    marginVertical: 20,
+    opacity: 0.7,
+    backgroundColor: colorConstant.red,
+  },
+  modalBackGround: {
+    backgroundColor: '#0000003D',
+    flex: 1,
+  },
 });
 
 export default styles;

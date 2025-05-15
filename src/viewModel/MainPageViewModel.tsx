@@ -11,6 +11,7 @@ const MainPageViewModel: React.FC = () => {
     isNextPage: false,
     isPrevPage: false,
   });
+  const [modalUri, setModalUrl] = useState<string>('');
   const [error, setError] = useState<string>('');
   const webRef = useRef<WebView>(null);
   const url = useRef<string>('');
@@ -49,6 +50,10 @@ const MainPageViewModel: React.FC = () => {
     error && setError('');
   };
 
+  const handleModalUrl = (url: string) => {
+    setModalUrl(url);
+  };
+
   return (
     <MainScreen
       url={url.current}
@@ -63,6 +68,8 @@ const MainPageViewModel: React.FC = () => {
       pageStatus={pageStatus}
       movePages={movePages}
       error={error}
+      modalUrl={modalUri}
+      handleModalUrl={handleModalUrl}
     />
   );
 };

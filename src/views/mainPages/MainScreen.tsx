@@ -17,6 +17,8 @@ interface MainScreenProps {
   pageStatus: INextPrevPageStatus;
   movePages: (toNextPage: boolean) => void;
   error: string;
+  modalUrl: string;
+  handleModalUrl: (url: string) => void;
 }
 
 const MainScreen: React.FC<MainScreenProps> = ({
@@ -32,6 +34,8 @@ const MainScreen: React.FC<MainScreenProps> = ({
   pageStatus,
   movePages,
   error,
+  modalUrl,
+  handleModalUrl,
 }) => {
   return (
     <React.Fragment>
@@ -45,6 +49,8 @@ const MainScreen: React.FC<MainScreenProps> = ({
           webRef={webRef}
           pageStatus={pageStatus}
           movePages={movePages}
+          modalUrl={modalUrl}
+          handleModalUrl={handleModalUrl}
         />
       ) : (
         <UrlInputScreen
