@@ -1,4 +1,4 @@
-package com.webapplication
+package com.spireApp
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

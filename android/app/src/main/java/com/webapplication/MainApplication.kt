@@ -1,4 +1,4 @@
-package com.webapplication
+package com.spireApp
 
 import android.app.Application
 import com.facebook.react.PackageList

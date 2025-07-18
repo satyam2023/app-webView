@@ -1,4 +1,4 @@
-package com.webapplication
+package com.spireApp
 
 import android.app.Activity
 import android.os.Bundle
