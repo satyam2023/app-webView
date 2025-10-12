@@ -3,6 +3,7 @@ import MainScreen from '../views/mainPages/MainScreen';
 import WebView, {WebViewNavigation} from 'react-native-webview';
 import {INextPrevPageStatus} from '../models/interfaces/IMainPage';
 import {stringConstants} from '../constant/stringConstant';
+import Snackbar from 'react-native-snackbar';
 
 const MainPageViewModel: React.FC = () => {
   const [webVisible, setWebVisible] = useState(false);
@@ -11,13 +12,23 @@ const MainPageViewModel: React.FC = () => {
     isNextPage: false,
     isPrevPage: false,
   });
+  const [IsNewFlow, setNewFlow] = useState(false);
   const [modalUri, setModalUrl] = useState<string>('');
   const [error, setError] = useState<string>('');
   const webRef = useRef<WebView>(null);
   const url = useRef<string>('');
+  const endsWithIsNewFlow = (str: string) => {
+    const IsNewFlow: boolean = str.trim().endsWith('IsNewFlow=true');
+    setNewFlow(IsNewFlow);
+    Snackbar.show({
+      text: IsNewFlow ? 'Opening in new flow' : 'Opening in old flow',
+      duration: Snackbar.LENGTH_LONG,
+    });
+  };
 
   const handleOpenWebView = () => {
     if (url.current.trim() !== '') {
+      endsWithIsNewFlow(url.current);
       setUrl(url.current);
       setWebVisible(true);
     } else {
@@ -70,6 +81,7 @@ const MainPageViewModel: React.FC = () => {
       error={error}
       modalUrl={modalUri}
       handleModalUrl={handleModalUrl}
+      isNewFlow={IsNewFlow}
     />
   );
 };

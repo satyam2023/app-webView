@@ -3,6 +3,7 @@ import UrlInputScreen from '../urlInputScreen/UrlInputScreen';
 import WebViewScreen from '../webView/WebViewScreen';
 import WebView, {WebViewNavigation} from 'react-native-webview';
 import {INextPrevPageStatus} from '../../models/interfaces/IMainPage';
+import NewFlowWebView from '../newFlow/NewFlowWebView';
 
 interface MainScreenProps {
   url: string;
@@ -19,6 +20,7 @@ interface MainScreenProps {
   error: string;
   modalUrl: string;
   handleModalUrl: (url: string) => void;
+  isNewFlow: boolean;
 }
 
 const MainScreen: React.FC<MainScreenProps> = ({
@@ -36,10 +38,23 @@ const MainScreen: React.FC<MainScreenProps> = ({
   error,
   modalUrl,
   handleModalUrl,
+  isNewFlow
 }) => {
   return (
     <React.Fragment>
       {webVisible ? (
+        isNewFlow?
+         <NewFlowWebView
+          url={url}
+          closeWebsite={closeWebsite}
+          loading={loading}
+          setLoading={setLoading}
+          handleNavigationStateChange={handleNavigationStateChange}
+          webRef={webRef}
+          pageStatus={pageStatus}
+          movePages={movePages}
+        />
+        :
         <WebViewScreen
           url={url}
           closeWebsite={closeWebsite}

@@ -40,6 +40,14 @@
                       android:host="buydirect-qa.bimnetworks.com"
                       android:pathPrefix="/"/>
             </intent-filter>
+            
+            <!-- Deep link for spire://home redirect from InAppBrowser -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="spire" android:host="home"/>
+            </intent-filter>
         </activity>
 
     </application>
