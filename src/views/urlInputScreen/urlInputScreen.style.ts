@@ -7,7 +7,7 @@ interface UrlInputScreenStyles {
   btnStyle: ViewStyle;
   appLogo: ImageStyle;
   inputScreenContainer: ViewStyle;
-  textInput: ViewStyle;
+  textInput: TextStyle;
   appHeadingText: TextStyle;
   errorText:TextStyle;
   appContentStyle:ViewStyle;
@@ -49,6 +49,7 @@ export const styles = (height: number, width: number) => {
     textInput: {
       width: '70%',
       marginRight: 16,
+      color:'black'
     },
     appHeadingText: {
       fontSize: 24,
